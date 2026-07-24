@@ -74,14 +74,10 @@
   <script>
     const feedbackForm = document.getElementById("feedbackForm");
     const feedbackSuccess = document.getElementById("feedbackSuccess");
-    const hideFeedbackSuccess = function () {
-      feedbackSuccess.classList.add("is-hidden");
-    };
-
-    feedbackForm.addEventListener("input", hideFeedbackSuccess);
 
     feedbackForm.addEventListener("submit", function (event) {
       event.preventDefault();
+      feedbackSuccess.classList.add("is-hidden");
 
       if (!feedbackForm.checkValidity()) {
         feedbackForm.reportValidity();
