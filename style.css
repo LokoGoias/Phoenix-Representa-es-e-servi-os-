@@ -112,7 +112,7 @@ body{
   border-top:1px solid #2c3a4d;padding:1.2rem 0;color:var(--muted);text-align:center;margin-top:2rem;
 }
 
-/* Ajuste da navegação para telas pequenas */
+/* Ajustes da navegação para telas pequenas */
 @media (max-width: 640px){
   .nav{align-items:flex-start}
 }

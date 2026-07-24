@@ -44,7 +44,7 @@
 
           <label for="nota">Nota de 1 a 5</label>
           <select id="nota" name="nota" aria-label="Escolha uma nota de 1 a 5" required>
-            <option value="" selected disabled>Selecione uma nota de 1 a 5</option>
+            <option value="" selected disabled>Selecione uma nota</option>
             <option value="1">1 - Muito ruim</option>
             <option value="2">2 - Ruim</option>
             <option value="3">3 - Regular</option>
@@ -79,7 +79,6 @@
     };
 
     feedbackForm.addEventListener("input", hideFeedbackSuccess);
-    feedbackForm.addEventListener("change", hideFeedbackSuccess);
 
     feedbackForm.addEventListener("submit", function (event) {
       event.preventDefault();
