@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback NINO kids | Phoenix Representações e Serviços</title>
+  <meta
+    name="description"
+    content="Envie seu feedback sobre o app NINO kids para ajudar a melhorar a experiência."
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero hero-page">
+    <nav class="container nav">
+      <h1 class="logo">Phoenix Representações e Serviços</h1>
+      <div class="nav-actions">
+        <a href="index.html" class="btn btn-outline">Início</a>
+        <a href="feedback.html" class="btn">Feedback</a>
+      </div>
+    </nav>
+
+    <section class="container hero-content hero-content-page">
+      <h2>Feedback do NINO kids</h2>
+      <p>
+        Sua opinião é importante para evoluirmos a experiência do NINO kids com mais cuidado,
+        qualidade e diversão para as famílias.
+      </p>
+    </section>
+  </header>
+
+  <main>
+    <section class="container section">
+      <div class="contact">
+        <h3>Conte como foi sua experiência</h3>
+        <p>Preencha os campos abaixo para enviar sua avaliação do app/serviço NINO kids.</p>
+
+        <form class="form" id="feedbackForm">
+          <label for="nome">Nome</label>
+          <input id="nome" name="nome" type="text" required />
+
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" required />
+
+          <label for="nota">Nota de 1 a 5</label>
+          <select id="nota" name="nota" required>
+            <option value="" selected disabled>Selecione uma nota</option>
+            <option value="1">1 - Muito ruim</option>
+            <option value="2">2 - Ruim</option>
+            <option value="3">3 - Regular</option>
+            <option value="4">4 - Bom</option>
+            <option value="5">5 - Excelente</option>
+          </select>
+
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+          <button type="submit" class="btn">Enviar feedback</button>
+        </form>
+
+        <p id="feedbackSuccess" class="success-message" role="status" aria-live="polite" hidden>
+          Obrigado! Seu feedback foi enviado com sucesso.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Phoenix Representações e Serviços. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    const feedbackForm = document.getElementById("feedbackForm");
+    const feedbackSuccess = document.getElementById("feedbackSuccess");
+
+    feedbackForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (!feedbackForm.checkValidity()) {
+        feedbackForm.reportValidity();
+        return;
+      }
+
+      feedbackForm.reset();
+      feedbackSuccess.hidden = false;
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
