@@ -85,7 +85,14 @@ body{
   padding:.8rem 1.1rem;border-radius:10px;transition:.2s ease;border:none;cursor:pointer;
 }
 .btn:hover{background:var(--primary-dark);color:var(--white)}
-.btn-current{cursor:default}
+.btn-current,
+.btn-current:disabled{
+  background:var(--primary-dark);
+  color:var(--white);
+  border:1px solid var(--primary-dark);
+  cursor:default;
+  opacity:1;
+}
 .btn-outline{
   background:transparent;color:var(--text);border:1px solid #4b5563;
 }
