@@ -74,6 +74,12 @@
   <script>
     const feedbackForm = document.getElementById("feedbackForm");
     const feedbackSuccess = document.getElementById("feedbackSuccess");
+    const hideFeedbackSuccess = function () {
+      feedbackSuccess.classList.add("is-hidden");
+    };
+
+    feedbackForm.addEventListener("input", hideFeedbackSuccess);
+    feedbackForm.addEventListener("change", hideFeedbackSuccess);
 
     feedbackForm.addEventListener("submit", function (event) {
       event.preventDefault();
