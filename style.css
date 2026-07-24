@@ -9,7 +9,6 @@
   --white:#ffffff;
   --whats:#22c55e;
   --max:1100px;
-  --breakpoint-sm:640px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{
@@ -113,6 +112,7 @@ body{
   border-top:1px solid #2c3a4d;padding:1.2rem 0;color:var(--muted);text-align:center;margin-top:2rem;
 }
 
-@media (max-width: var(--breakpoint-sm)){
+/* Ajuste da navegação para telas pequenas */
+@media (max-width: 640px){
   .nav{align-items:flex-start}
 }
