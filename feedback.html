@@ -77,15 +77,20 @@
 
     feedbackForm.addEventListener("submit", function (event) {
       event.preventDefault();
-      feedbackSuccess.classList.add("is-hidden");
+
+      if (!feedbackSuccess.classList.contains("is-hidden")) {
+        feedbackSuccess.classList.add("is-hidden");
+      }
 
       if (!feedbackForm.checkValidity()) {
         feedbackForm.reportValidity();
         return;
       }
 
-      feedbackForm.reset();
-      feedbackSuccess.classList.remove("is-hidden");
+      window.setTimeout(function () {
+        feedbackForm.reset();
+        feedbackSuccess.classList.remove("is-hidden");
+      }, 150);
     });
 
     document.getElementById("year").textContent = new Date().getFullYear();
