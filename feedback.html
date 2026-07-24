@@ -16,7 +16,7 @@
       <h1 class="logo">Phoenix Representações e Serviços</h1>
       <div class="nav-actions">
         <a href="index.html" class="btn btn-outline">Início</a>
-        <button type="button" class="btn btn-current" aria-current="page" disabled>Feedback</button>
+        <span class="btn btn-current" role="link" aria-current="page" aria-disabled="true">Feedback</span>
       </div>
     </nav>
 
@@ -58,7 +58,7 @@
           <button type="submit" class="btn">Enviar feedback</button>
         </form>
 
-        <p id="feedbackSuccess" class="success-message" role="status" aria-live="polite" hidden>
+        <p id="feedbackSuccess" class="success-message is-hidden" role="status" aria-live="assertive">
           Obrigado! Seu feedback foi enviado com sucesso.
         </p>
       </div>
@@ -84,7 +84,7 @@
       }
 
       feedbackForm.reset();
-      feedbackSuccess.hidden = false;
+      feedbackSuccess.classList.remove("is-hidden");
     });
 
     document.getElementById("year").textContent = new Date().getFullYear();

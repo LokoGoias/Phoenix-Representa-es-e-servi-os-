@@ -76,6 +76,7 @@ body{
   background:rgba(34,197,94,.12);
   color:#bbf7d0;
 }
+.is-hidden{display:none}
 .contact-alt{margin-top:1rem;color:var(--muted)}
 .contact-alt a{color:#93c5fd;text-decoration:none}
 .contact-alt a:hover{text-decoration:underline}
