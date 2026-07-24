@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phoenix Representações e Serviços</title>
+  <meta name="description" content="Desenvolvimento de apps e sites sob medida para empresas e empreendedores." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="container nav">
+      <h1 class="logo">Phoenix Representações e Serviços</h1>
+      <div class="nav-actions">
+        <a href="#contato" class="btn btn-outline">Solicitar Orçamento</a>
+      </div>
+    </nav>
+
+    <section class="container hero-content">
+      <h2>Transformamos ideias em aplicativos e sites profissionais</h2>
+      <p>
+        Soluções digitais sob medida para empresas e empreendedores que querem crescer com tecnologia.
+      </p>
+      <div class="hero-cta">
+        <a href="#contato" class="btn">Falar com a Phoenix</a>
+        <a id="whatsappHero" class="btn btn-whats" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="container section" id="sobre">
+      <h3>Sobre nós</h3>
+      <p>
+        Na <strong>Phoenix Representações e Serviços</strong>, ajudamos negócios a se posicionarem no digital
+        com projetos modernos, eficientes e focados em resultado. Somos especializados no desenvolvimento
+        de aplicativos e sites, com atendimento personalizado e suporte contínuo.
+      </p>
+    </section>
+
+    <section class="container section" id="servicos">
+      <h3>Serviços</h3>
+      <div class="grid">
+        <article class="card">
+          <h4>Criação de Sites</h4>
+          <p>Sites institucionais, landing pages e catálogos digitais.</p>
+        </article>
+        <article class="card">
+          <h4>Desenvolvimento de Apps</h4>
+          <p>Aplicativos para Android e iOS com foco em performance.</p>
+        </article>
+        <article class="card">
+          <h4>Lojas Virtuais</h4>
+          <p>E-commerces prontos para vender com segurança e escalabilidade.</p>
+        </article>
+        <article class="card">
+          <h4>Sistemas Web</h4>
+          <p>Plataformas sob medida para otimizar processos do seu negócio.</p>
+        </article>
+        <article class="card">
+          <h4>Manutenção e Suporte</h4>
+          <p>Acompanhamento técnico para manter tudo funcionando sempre.</p>
+        </article>
+        <article class="card">
+          <h4>SEO e Performance</h4>
+          <p>Melhorias para aparecer no Google e carregar mais rápido.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section" id="diferenciais">
+      <h3>Diferenciais</h3>
+      <ul class="list">
+        <li>Atendimento personalizado</li>
+        <li>Projetos sob medida</li>
+        <li>Qualidade e agilidade nas entregas</li>
+        <li>Suporte contínuo após entrega</li>
+        <li>Foco em resultado e experiência do usuário</li>
+      </ul>
+    </section>
+
+    <section class="container section contact" id="contato">
+      <h3>Solicite um orçamento</h3>
+      <p>Preencha o formulário e retornaremos o mais rápido possível.</p>
+
+      <!-- Formulário com Formspree -->
+      <!-- Troque o ACTION pelo seu endpoint real após criar em formspree.io -->
+      <form class="form" action="https://formspree.io/f/SEU_ENDPOINT" method="POST">
+        <label for="nome">Nome</label>
+        <input id="nome" name="nome" type="text" required />
+
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="telefone">Telefone / WhatsApp</label>
+        <input id="telefone" name="telefone" type="text" required />
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+        <button type="submit" class="btn">Enviar mensagem</button>
+      </form>
+
+      <p class="contact-alt">
+        Ou, se preferir, fale direto no WhatsApp:
+        <a id="whatsappContato" target="_blank" rel="noopener">Clique aqui</a>
+      </p>
+
+      <p class="contact-alt">
+        E-mail: <a href="mailto:Phoenix.represent.servic@gmail.com">Phoenix.represent.servic@gmail.com</a>
+      </p>
+    </section>
+  </main>
+
+  <a id="whatsappFloat" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    WhatsApp
+  </a>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Phoenix Representações e Serviços. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // ===== CONFIGURE AQUI =====
+    const WHATSAPP_NUMERO = "5562999999999"; // Ex: 55 + DDD + número (somente números)
+    const WHATSAPP_TEXTO = "Olá! Quero um orçamento para desenvolvimento de app/site.";
+    // ==========================
+
+    const linkWhats = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(WHATSAPP_TEXTO)}`;
+
+    document.getElementById("whatsappHero").href = linkWhats;
+    document.getElementById("whatsappContato").href = linkWhats;
+    document.getElementById("whatsappFloat").href = linkWhats;
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
