@@ -77,15 +77,7 @@
 
     feedbackForm.addEventListener("submit", function (event) {
       event.preventDefault();
-
-      if (!feedbackSuccess.classList.contains("is-hidden")) {
-        feedbackSuccess.classList.add("is-hidden");
-      }
-
-      if (!feedbackForm.checkValidity()) {
-        feedbackForm.reportValidity();
-        return;
-      }
+      feedbackSuccess.classList.add("is-hidden");
 
       window.setTimeout(function () {
         feedbackForm.reset();
